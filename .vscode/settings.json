@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd \"c:\\\\Users\\\\USER\\\\Downloads\\\\worldmonitor-main\\\\worldmonitor-main\"; node --input-type=module -e \"import \\{ loadManifest, scanUpstreamHosts, mergeEntry \\} from '\\./scripts/source-attribution\\.mjs'; const inventory = scanUpstreamHosts\\(process\\.cwd\\(\\)\\); const manifest = loadManifest\\(process\\.cwd\\(\\)\\); const observed = inventory\\.find\\(e => e\\.host === 'romania\\.worldmonitor\\.app'\\); const manifestEntry = manifest\\.entries\\.find\\(e => e\\.host === 'romania\\.worldmonitor\\.app'\\); console\\.log\\('OBSERVED', JSON\\.stringify\\(observed, null, 2\\)\\); console\\.log\\('MANIFEST', JSON\\.stringify\\(manifestEntry, null, 2\\)\\); console\\.log\\('MERGED', JSON\\.stringify\\(mergeEntry\\(observed, manifestEntry\\), null, 2\\)\\);\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"c:\\\\Users\\\\USER\\\\Downloads\\\\worldmonitor-main\\\\worldmonitor-main\"; node --input-type=module -e \"import \\{ loadManifest, scanUpstreamHosts, validateManifest \\} from '\\./scripts/source-attribution\\.mjs'; const inventory = scanUpstreamHosts\\(process\\.cwd\\(\\)\\); const manifest = loadManifest\\(process\\.cwd\\(\\)\\); const errors = validateManifest\\(inventory, manifest\\); console\\.log\\(errors\\.filter\\(e => e\\.includes\\('romania\\.worldmonitor\\.app'\\)\\)\\.join\\('\\\\n'\\)\\); console\\.log\\('all errors count', errors\\.length\\);\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
