@@ -104,7 +104,7 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v6
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -166,7 +166,7 @@ jobs:
       changed: ${{ steps.patch.outputs.changed }}
     steps:
       - name: Checkout the exact internal PR head without persisted credentials
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v6
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
@@ -266,7 +266,7 @@ jobs:
       generated-sha: ${{ steps.commit.outputs.generated-sha }}
     steps:
       - name: Checkout the exact internal PR head without persisted credentials
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v6
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
@@ -362,7 +362,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout internal PR merge commit
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v6
         with:
           persist-credentials: false
 
