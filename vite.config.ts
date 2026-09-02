@@ -122,6 +122,7 @@ const PANEL_CLUSTER: Record<string, PanelChunkName> = {
   // Defense / military / aviation
   AirlineIntel: 'panels-defense', DefensePatents: 'panels-defense',
   OrefSirens: 'panels-defense', StrategicPosture: 'panels-defense',
+  RomaniaDrone: 'panels-defense',
   StrategicRisk: 'panels-defense', ThermalEscalation: 'panels-defense',
   UcdpEvents: 'panels-defense',
   // News / feeds / briefs
