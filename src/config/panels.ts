@@ -1146,6 +1146,27 @@ const ENERGY_MOBILE_MAP_LAYERS: MapLayers = {
 
 type PanelVariant = 'full' | 'tech' | 'finance' | 'commodity' | 'energy' | 'happy' | 'romania';
 
+const ROMANIA_PANELS: Record<string, PanelConfig> = {
+  map: { name: 'Hartă România', enabled: true, priority: 1 },
+  'live-news': { name: 'Știri live', enabled: true, priority: 1 },
+  'romania-drone': { name: 'Drone și incidente', enabled: true, priority: 1 },
+  'live-webcams': { name: 'Webcam-uri live', enabled: true, priority: 1 },
+  'threat-timeline': { name: 'Cronologia riscurilor', enabled: true, priority: 1 },
+  intel: { name: 'Inteligență locală', enabled: true, priority: 1 },
+  cii: { name: 'Instabilitate țară', enabled: true, priority: 1 },
+  'strategic-risk': { name: 'Riscuri strategice', enabled: true, priority: 1 },
+  politics: { name: 'Știri din România', enabled: true, priority: 1 },
+  europe: { name: 'Europa & România', enabled: true, priority: 1 },
+  energy: { name: 'Energie & resurse', enabled: true, priority: 1 },
+  gov: { name: 'Guvern & politică', enabled: true, priority: 1 },
+  markets: { name: 'Piețe & BVB', enabled: true, priority: 1 },
+  economic: { name: 'Indicatori economici', enabled: true, priority: 1 },
+  commodities: { name: 'Materii prime & logistică', enabled: true, priority: 1 },
+  finance: { name: 'Finanțe', enabled: true, priority: 1 },
+  tech: { name: 'Tehnologie & digitalizare', enabled: true, priority: 2 },
+  romania: { name: 'România', enabled: true, priority: 2 },
+};
+
 const VARIANT_PANEL_CONFIGS: Record<PanelVariant, Record<string, PanelConfig>> = {
   full: FULL_PANELS,
   tech: TECH_PANELS,
@@ -1153,7 +1174,7 @@ const VARIANT_PANEL_CONFIGS: Record<PanelVariant, Record<string, PanelConfig>> =
   commodity: COMMODITY_PANELS,
   energy: ENERGY_PANELS,
   happy: HAPPY_PANELS,
-  romania: FULL_PANELS,
+  romania: ROMANIA_PANELS,
 };
 
 function getVariantPanelConfigs(variant: string): Record<string, PanelConfig> | undefined {
@@ -1176,6 +1197,7 @@ export const ALL_PANELS: Record<string, PanelConfig> = {
   ...TECH_PANELS,
   ...FINANCE_PANELS,
   ...FULL_PANELS,
+  ...ROMANIA_PANELS,
 };
 
 /** Per-variant canonical panel order (keys = which panels are enabled by default). */
@@ -1186,7 +1208,7 @@ export const VARIANT_DEFAULTS: Record<string, string[]> = {
   commodity: Object.keys(VARIANT_PANEL_CONFIGS.commodity),
   energy:    Object.keys(VARIANT_PANEL_CONFIGS.energy),
   happy:     Object.keys(VARIANT_PANEL_CONFIGS.happy),
-  romania:   Object.keys(VARIANT_PANEL_CONFIGS.full),
+  romania:   Object.keys(VARIANT_PANEL_CONFIGS.romania),
 };
 
 /**
@@ -1452,6 +1474,37 @@ export const DEFAULT_PANELS: Record<string, PanelConfig> = Object.fromEntries(
   )
 );
 
+const ROMANIA_MAP_LAYERS: MapLayers = {
+  ...FULL_MAP_LAYERS,
+  hotspots: true,
+  conflicts: true,
+  bases: true,
+  weather: true,
+  outages: true,
+  economic: true,
+  pipelines: true,
+  waterways: true,
+  tradeRoutes: true,
+  sanctions: true,
+  resilienceScore: true,
+  dayNight: true,
+  protests: true,
+  flights: true,
+};
+
+const ROMANIA_MOBILE_MAP_LAYERS: MapLayers = {
+  ...FULL_MOBILE_MAP_LAYERS,
+  hotspots: true,
+  conflicts: true,
+  weather: true,
+  outages: true,
+  economic: true,
+  waterways: true,
+  sanctions: true,
+  resilienceScore: true,
+  dayNight: true,
+};
+
 export const DEFAULT_MAP_LAYERS = SITE_VARIANT === 'happy'
   ? HAPPY_MAP_LAYERS
   : SITE_VARIANT === 'tech'
@@ -1463,7 +1516,7 @@ export const DEFAULT_MAP_LAYERS = SITE_VARIANT === 'happy'
         : SITE_VARIANT === 'energy'
           ? ENERGY_MAP_LAYERS
           : SITE_VARIANT === 'romania'
-            ? FULL_MAP_LAYERS
+            ? ROMANIA_MAP_LAYERS
             : FULL_MAP_LAYERS;
 
 export const MOBILE_DEFAULT_MAP_LAYERS = SITE_VARIANT === 'happy'
@@ -1477,7 +1530,7 @@ export const MOBILE_DEFAULT_MAP_LAYERS = SITE_VARIANT === 'happy'
         : SITE_VARIANT === 'energy'
           ? ENERGY_MOBILE_MAP_LAYERS
           : SITE_VARIANT === 'romania'
-            ? FULL_MOBILE_MAP_LAYERS
+            ? ROMANIA_MOBILE_MAP_LAYERS
             : FULL_MOBILE_MAP_LAYERS;
 
 /** Maps map-layer toggle keys to their data-freshness source IDs (single source of truth). */

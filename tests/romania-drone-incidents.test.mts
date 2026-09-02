@@ -6,6 +6,7 @@ import {
   filterRomaniaDroneFlights,
   findRomaniaDroneArticles,
 } from '../src/services/romania-drone-incidents';
+import { getInitialPanelSettingsForVariant } from '../src/config/panels';
 
 function article(overrides: Partial<NewsItem> = {}): NewsItem {
   return {
@@ -61,4 +62,13 @@ test('keeps only drone flights inside Romanian bounds', () => {
     flight({ id: 'drone-2', lon: 30.1 }),
   ]);
   assert.deepEqual(result.map((item) => item.id), ['drone-1']);
+});
+
+test('keeps the Romania variant scoped to Romanian content and panels', () => {
+  const settings = getInitialPanelSettingsForVariant('romania');
+  assert.equal(settings['romania-drone']?.enabled, true);
+  assert.equal(settings.us?.enabled, false);
+  assert.equal(settings.middleeast?.enabled, false);
+  assert.equal(settings['live-news']?.enabled, true);
+  assert.equal(settings.map?.name, 'Hartă România');
 });

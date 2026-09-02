@@ -1109,10 +1109,9 @@ const ROMANIA_FEEDS: Record<string, Feed[]> = {
     { name: 'Romania Insider', url: rss('https://www.romania-insider.com/feed') },
   ],
   europe: [
+    // Keep Romania-local regional coverage narrow. Broader pan-European outlets are
+    // excluded so the variant does not drift into unrelated state-level reporting.
     { name: 'Euractiv Romania', url: rss('https://www.euractiv.com/section/europe-s-east/feed/') },
-    { name: 'Reuters Europe', url: rss('https://news.google.com/rss/search?q=site:reuters.com+Romania+Europe+when:3d&hl=en-US&gl=US&ceid=US:en') },
-    { name: 'EUobserver', url: rss('https://euobserver.com/rss') },
-    { name: 'Financial Times Europe', url: rss('https://www.ft.com/rss/world/europe') },
   ],
   economic: [
     { name: 'Ziarul Financiar', url: rss('https://www.zf.ro/rss') },
@@ -1130,7 +1129,6 @@ const ROMANIA_FEEDS: Record<string, Feed[]> = {
     { name: 'Energynomics', url: rss('https://www.energynomics.ro/feed/') },
     { name: 'Romania Energy', url: rss('https://news.google.com/rss/search?q=site:energynomics.ro+energie+Romania+when:7d&hl=ro&gl=RO&ceid=RO:ro') },
     { name: 'OilPrice Romania', url: rss('https://news.google.com/rss/search?q=Romania+oil+gas+energy+when:3d&hl=ro&gl=RO&ceid=RO:ro') },
-    { name: 'IEA Europe', url: rss('https://news.google.com/rss/search?q=site:iea.org+Romania+energy+when:7d&hl=en-US&gl=US&ceid=US:en') },
   ],
   gov: [
     { name: 'Guvernul României', url: rss('https://gov.ro/rss') },

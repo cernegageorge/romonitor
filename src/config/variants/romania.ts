@@ -1,8 +1,9 @@
 // Romania variant - romania.worldmonitor.app
+// Keep the dashboard strictly Romania-scoped: no global default panels, no
+// broader world/regional map set, and no unrelated cross-border data sources.
 import type { PanelConfig, MapLayers } from '@/types';
 import type { VariantConfig } from './base';
 import {
-  DEFAULT_PANELS as FULL_DEFAULT_PANELS,
   DEFAULT_MAP_LAYERS as FULL_DEFAULT_MAP_LAYERS,
   MOBILE_DEFAULT_MAP_LAYERS as FULL_MOBILE_DEFAULT_MAP_LAYERS,
 } from './full';
@@ -10,7 +11,6 @@ import {
 export * from './base';
 
 export const DEFAULT_PANELS: Record<string, PanelConfig> = {
-  ...FULL_DEFAULT_PANELS,
   map: { name: 'Hartă România', enabled: true, priority: 1 },
   'live-news': { name: 'Știri live', enabled: true, priority: 1 },
   'romania-drone': { name: 'Drone și incidente', enabled: true, priority: 1 },
@@ -53,11 +53,11 @@ export const MOBILE_DEFAULT_MAP_LAYERS: MapLayers = {
   ...FULL_MOBILE_DEFAULT_MAP_LAYERS,
   hotspots: true,
   conflicts: true,
-  bases: true,
   weather: true,
   outages: true,
   economic: true,
-  tradeRoutes: true,
+  waterways: true,
+  sanctions: true,
   resilienceScore: true,
   dayNight: true,
 };
