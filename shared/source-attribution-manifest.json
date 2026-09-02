@@ -140,20 +140,6 @@
       ]
     },
     {
-      "host": "romania.worldmonitor.app",
-      "provider": "romania.worldmonitor.app",
-      "kind": "structured",
-      "observed": true,
-      "license": "Excluded: first-party, control-plane, UI, or rendering transport",
-      "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
-      "status": "excluded",
-      "references": [
-        {
-          "path": "src/config/variant-meta.ts"
-        }
-      ]
-    },
-    {
       "host": "abc-iview-mediapackagestreams-2.akamaized.net",
       "provider": "abc-iview-mediapackagestreams-2.akamaized.net",
       "kind": "feed",
@@ -2028,6 +2014,20 @@
       ]
     },
     {
+      "host": "bursa.ro",
+      "provider": "bursa.ro",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit bursa.ro and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
       "host": "calgaryherald.com",
       "provider": "calgaryherald.com",
       "kind": "feed",
@@ -2559,6 +2559,20 @@
         {
           "path": "server/worldmonitor/news/v1/_feeds.ts"
         },
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
+      "host": "consilium.europa.eu",
+      "provider": "consilium.europa.eu",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit consilium.europa.eu and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
         {
           "path": "src/config/feeds.ts"
         }
@@ -3536,6 +3550,20 @@
       ]
     },
     {
+      "host": "energynomics.ro",
+      "provider": "energynomics.ro",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit energynomics.ro and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
       "host": "eng.lsm.lv",
       "provider": "eng.lsm.lv",
       "kind": "feed",
@@ -3700,6 +3728,20 @@
       "observed": true,
       "license": "Provider terms for this feed publisher; verify before redistribution",
       "attribution": "Credit eu-startups.com and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
+      "host": "euobserver.com",
+      "provider": "euobserver.com",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit euobserver.com and link to the original feed publisher.",
       "status": "terms-review",
       "references": [
         {
@@ -4627,6 +4669,20 @@
       "observed": true,
       "license": "Provider terms for this feed publisher; verify before redistribution",
       "attribution": "Credit goldsilverworlds.com and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
+      "host": "gov.ro",
+      "provider": "gov.ro",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit gov.ro and link to the original feed publisher.",
       "status": "terms-review",
       "references": [
         {
@@ -7700,6 +7756,20 @@
       ]
     },
     {
+      "host": "romania.worldmonitor.app",
+      "provider": "romania.worldmonitor.app",
+      "kind": "structured",
+      "observed": true,
+      "license": "Excluded: first-party, control-plane, UI, or rendering transport",
+      "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
+      "status": "excluded",
+      "references": [
+        {
+          "path": "src/config/variant-meta.ts"
+        }
+      ]
+    },
+    {
       "host": "rsf.org",
       "provider": "Reporters Without Borders (RSF)",
       "kind": "structured",
@@ -10388,6 +10458,20 @@
       ]
     },
     {
+      "host": "www.agerpres.ro",
+      "provider": "www.agerpres.ro",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit www.agerpres.ro and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
       "host": "www.alarabiya.net",
       "provider": "www.alarabiya.net",
       "kind": "feed",
@@ -10724,6 +10808,20 @@
       ]
     },
     {
+      "host": "www.business-review.eu",
+      "provider": "www.business-review.eu",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit www.business-review.eu and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
       "host": "www.businessinsider.com",
       "provider": "Business Insider",
       "kind": "feed",
@@ -10735,6 +10833,20 @@
         {
           "path": "server/worldmonitor/news/v1/_feeds.ts"
         },
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
+      "host": "www.bvb.ro",
+      "provider": "www.bvb.ro",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit www.bvb.ro and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
         {
           "path": "src/config/feeds.ts"
         }
@@ -11405,6 +11517,20 @@
       ]
     },
     {
+      "host": "www.energynomics.ro",
+      "provider": "www.energynomics.ro",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit www.energynomics.ro and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
       "host": "www.engadget.com",
       "provider": "www.engadget.com",
       "kind": "feed+structured",
@@ -11452,6 +11578,20 @@
         },
         {
           "path": "src/config/variants/tech.ts"
+        }
+      ]
+    },
+    {
+      "host": "www.euractiv.com",
+      "provider": "www.euractiv.com",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit www.euractiv.com and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
         }
       ]
     },
@@ -12370,6 +12510,20 @@
       ]
     },
     {
+      "host": "www.mediafax.ro",
+      "provider": "www.mediafax.ro",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit www.mediafax.ro and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
       "host": "www.miit.gov.cn",
       "provider": "www.miit.gov.cn",
       "kind": "structured",
@@ -12898,6 +13052,20 @@
       ]
     },
     {
+      "host": "www.profit.ro",
+      "provider": "www.profit.ro",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit www.profit.ro and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
       "host": "www.radiondekeluka.org",
       "provider": "Radio Ndeke Luka",
       "kind": "feed",
@@ -13067,6 +13235,20 @@
         {
           "path": "server/worldmonitor/news/v1/_feeds.ts"
         },
+        {
+          "path": "src/config/feeds.ts"
+        }
+      ]
+    },
+    {
+      "host": "www.romania-insider.com",
+      "provider": "www.romania-insider.com",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit www.romania-insider.com and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
         {
           "path": "src/config/feeds.ts"
         }
@@ -14381,6 +14563,20 @@
         },
         {
           "path": "src/config/variants/tech.ts"
+        }
+      ]
+    },
+    {
+      "host": "www.zf.ro",
+      "provider": "www.zf.ro",
+      "kind": "feed",
+      "observed": true,
+      "license": "Provider terms for this feed publisher; verify before redistribution",
+      "attribution": "Credit www.zf.ro and link to the original feed publisher.",
+      "status": "terms-review",
+      "references": [
+        {
+          "path": "src/config/feeds.ts"
         }
       ]
     },
