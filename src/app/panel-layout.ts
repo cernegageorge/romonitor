@@ -2612,6 +2612,10 @@ export class PanelLayoutManager implements AppModule {
     this.createNewsPanel('gov', 'panels.gov');
     this.createNewsPanel('intel', 'panels.intel');
 
+    this.lazyImportedPanel('romania-drone', () => import('@/components/RomaniaDronePanel'), 'RomaniaDronePanel', (RomaniaDronePanel) => (
+      new RomaniaDronePanel(() => this.ctx.allNews)
+    ));
+
     this.lazyDefaultPanel('crypto', () => import('@/components/MarketPanel'), 'CryptoPanel');
     this.lazyDefaultPanel('crypto-heatmap', () => import('@/components/MarketPanel'), 'CryptoHeatmapPanel');
     this.lazyDefaultPanel('defi-tokens', () => import('@/components/MarketPanel'), 'DefiTokensPanel');

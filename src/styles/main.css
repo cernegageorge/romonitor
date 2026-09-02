@@ -28456,3 +28456,61 @@ body.map-width-resizing {
 .passkey-offer-close:hover {
   color: #e8e8e8;
 }
+
+.romania-drone-panel {
+  display: grid;
+  gap: 8px;
+  color: var(--text-primary, #e8e8e8);
+  font-size: 12px;
+}
+
+.romania-drone-panel h4 {
+  margin: 8px 0 0;
+  color: var(--text-secondary, #aeb7c4);
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.romania-drone-summary {
+  padding: 8px;
+  border-left: 2px solid #ffb454;
+  background: rgba(255, 180, 84, 0.08);
+}
+
+.romania-drone-list {
+  display: grid;
+  gap: 6px;
+}
+
+.romania-drone-card {
+  display: block;
+  padding: 8px;
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  text-decoration: none;
+}
+
+.romania-drone-card:hover {
+  border-color: #ffb454;
+}
+
+.romania-drone-card__meta,
+.romania-drone-card__tag,
+.romania-drone-disclaimer,
+.romania-drone-empty {
+  color: var(--text-muted, #8993a3);
+  font-size: 11px;
+}
+
+.romania-drone-card__title {
+  margin: 3px 0;
+  color: var(--text-primary, #f3f4f6);
+  line-height: 1.35;
+}
+
+.romania-drone-disclaimer {
+  padding-top: 4px;
+  line-height: 1.4;
+}

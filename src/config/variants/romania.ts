@@ -13,6 +13,7 @@ export const DEFAULT_PANELS: Record<string, PanelConfig> = {
   ...FULL_DEFAULT_PANELS,
   map: { name: 'Hartă România', enabled: true, priority: 1 },
   'live-news': { name: 'Știri live', enabled: true, priority: 1 },
+  'romania-drone': { name: 'Drone și incidente', enabled: true, priority: 1 },
   'live-webcams': { name: 'Webcam-uri live', enabled: true, priority: 1 },
   'threat-timeline': { name: 'Cronologia riscurilor', enabled: true, priority: 1 },
   intel: { name: 'Inteligență locală', enabled: true, priority: 1 },

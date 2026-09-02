@@ -95,6 +95,7 @@ import type { EnergyDisruptionsPanel } from '@/components/EnergyDisruptionsPanel
 import type { EnergyRiskOverviewPanel } from '@/components/EnergyRiskOverviewPanel';
 import type { ChokepointStripPanel } from '@/components/ChokepointStripPanel';
 import type { ClimateNewsPanel } from '@/components/ClimateNewsPanel';
+import type { RomaniaDronePanel } from '@/components/RomaniaDronePanel';
 import type { ConsumerPricesPanel } from '@/components/ConsumerPricesPanel';
 import type { DefensePatentsPanel } from '@/components/DefensePatentsPanel';
 import type { MacroTilesPanel } from '@/components/MacroTilesPanel';
@@ -816,6 +817,10 @@ export class App {
     if (shouldPrime('climate-news')) {
       const panel = this.state.panels['climate-news'] as ClimateNewsPanel | undefined;
       if (panel) primeTask('climate-news', () => panel.fetchData());
+    }
+    if (shouldPrime('romania-drone')) {
+      const panel = this.state.panels['romania-drone'] as RomaniaDronePanel | undefined;
+      if (panel) primeTask('romania-drone', () => panel.fetchData());
     }
     if (shouldPrime('consumer-prices')) {
       const panel = this.state.panels['consumer-prices'] as ConsumerPricesPanel | undefined;
