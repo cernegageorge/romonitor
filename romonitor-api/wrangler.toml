@@ -1,0 +1,7 @@
+name = "romonitor-api"
+main = "src/index.js"
+compatibility_date = "2025-05-01"
+preview_urls = false
+
+[observability]
+enabled = true
