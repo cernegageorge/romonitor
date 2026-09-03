@@ -18,5 +18,6 @@ npx wrangler deploy --config workers\romonitor-api\wrangler.toml
 ```
 
 The current Worker serves the Romania news digest, Romania-bounds aircraft
-tracking, and `/health`. Other API routes remain unchanged on the existing
-backend until they are migrated and tested.
+tracking, and `/health`. News, economic, market, military, and webcam routes
+not implemented directly in the Worker are forwarded to the existing backend,
+which preserves its API-key authentication while migration continues.

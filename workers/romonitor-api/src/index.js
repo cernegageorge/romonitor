@@ -183,7 +183,15 @@ export default {
       });
     }
 
-    if (url.pathname.startsWith('/api/news/')) {
+    const proxyPrefixes = [
+      '/api/news/',
+      '/api/economic/',
+      '/api/market/',
+      '/api/military/',
+      '/api/webcam/',
+    ];
+
+    if (proxyPrefixes.some((prefix) => url.pathname.startsWith(prefix))) {
       if (url.pathname === '/api/news/v1/list-feed-digest' && request.method === 'GET') {
         try {
           return jsonResponse(request, await listRomaniaFeedDigest());
