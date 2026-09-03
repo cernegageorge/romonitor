@@ -1,1 +1,0 @@
-This folder contains the built output assets for the worker "romonitor-api" generated at 2026-09-03T11:33:09.640Z.
